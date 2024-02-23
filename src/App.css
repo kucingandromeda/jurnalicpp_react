@@ -93,12 +93,18 @@ p {
 }
 
 .genre-container a {
-  color: rgb(70, 70, 70);
+  color: rgb(0, 0, 0, 0.5);
   text-decoration: none;
-  margin: 0 20px 20px 20px;
+  margin: 0 30px 20px 30px;
   font-family: "poppins", sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.genre-container a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }
 
 /* recomandation */
@@ -162,4 +168,20 @@ p {
   border: 1px solid black;
   margin: 50px;
   border-radius: 10px;
+}
+
+/* powered */
+.powered-section {
+  width: 100%;
+  background-color: rgb(74, 77, 231);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0 10px 0;
+}
+
+.redekto {
+  font-family: kanit, sans-serif;
 }
