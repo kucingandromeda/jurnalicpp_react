@@ -1,13 +1,10 @@
 [
   {
-    "judul": "testing dari pengembang",
-    "penulis": ["kucing_andromeda", "26", "2", "2024"],
-    "paragraf": [
-      "ini adalah testing dari paragraf pertama",
-      "ini testing dari paragraf kedua",
-      "ini yang ketiga"
-    ],
-    "url": "testing-dari-pengembang"
+    "judul": "Training of Young Innovation Journalist",
+    "penulis": ["Fauzan Prayoga I", "14", "10", "2023"],
+    "paragraf": ["nothing system"],
+    "url": "Training-of-Young-Innovation-Journalist",
+    "img": "image_data/Training of Young Innovation JournalistIMG.png"
   },
   {
     "judul": "informasi dari pengembang ke dua",

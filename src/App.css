@@ -403,6 +403,10 @@ li {
   flex-direction: column;
 }
 
+.news-area h1 {
+  text-align: center;
+}
+
 .penulis {
   display: flex;
   justify-content: center;
@@ -415,10 +419,10 @@ li {
 }
 
 .news-image {
-  max-width: 100%;
+  max-width: 85%;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 50px 0 75px 0;
+  margin: 50px 0px 75px 0px;
 }
 
 .paragraph {
@@ -428,6 +432,7 @@ li {
 .paragraph p {
   line-height: 27px;
   color: #113f59;
+  margin: 15px 10px 15px 10px;
 }
 
 .footer-section {
@@ -438,4 +443,14 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-img {
+  max-width: 75%;
 }
