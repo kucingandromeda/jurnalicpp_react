@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import dataJson from "./news_data/newsData.json";
+import dataJson from "./../../../data/newsData.json";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 

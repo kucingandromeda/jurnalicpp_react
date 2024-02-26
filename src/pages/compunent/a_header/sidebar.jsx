@@ -5,8 +5,14 @@ export const Sidebar = ({ stat, stat_fn }) => {
   return (
     <motion.div
       variants={{
-        close: { left: "-100%", transition: { ease: "easeInOut" } },
-        open: { left: "0", transition: { ease: "easeInOut" } },
+        close: {
+          left: "-200%",
+          transition: { ease: "easeInOut" },
+        },
+        open: {
+          left: "0",
+          transition: { ease: "easeInOut" },
+        },
       }}
       animate={stat ? "open" : "close"}
       className="sidebar"
