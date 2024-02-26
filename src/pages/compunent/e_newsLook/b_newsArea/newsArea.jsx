@@ -7,7 +7,7 @@ export const NewsArea = () => {
         <p>Kucing andromeda</p>
         <p>tgl-mon-thn</p>
       </div> */}
-      <div className="news-image"></div>
+      <img className="news-image" src={"./banner/Nothing image.png"} alt="" />
       <div className="paragraph">
         <p>
           Meski banyak teknologi yang bisa digunakan untuk membuat laman

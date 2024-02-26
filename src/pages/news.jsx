@@ -7,7 +7,7 @@ export const NewsShowing = () => {
     <>
       <HeaderNavNews></HeaderNavNews>
       <NewsArea></NewsArea>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 };
