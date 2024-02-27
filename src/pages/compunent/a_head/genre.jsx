@@ -5,7 +5,7 @@ export const Genre = () => {
       <h2 className="genre-title">Selamat membaca</h2>
       <nav className="genre-container">
         <a>Sastra</a>
-        <a>Informasi</a>
+        <a>Artikel</a>
         <a>IT</a>
         <a>Politik</a>
         <a>Acara</a>

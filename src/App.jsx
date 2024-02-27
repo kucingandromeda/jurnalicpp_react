@@ -5,6 +5,7 @@ import { Home } from "./pages/home";
 
 ////////url//////////
 import { TrainingofYoungInnovationJournalist } from "./pages/newsPages/Training of Young Innovation Journalist";
+import { MIRANDADANTEKATEKIPENGIRIMPESAN } from "./pages/newsPages/MIRANDA DAN TEKA-TEKI PENGIRIM PESAN";
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
             path="Training-of-Young-Innovation-Journalist"
             element={<TrainingofYoungInnovationJournalist />}
           />
+          <Route
+            path="MIRANDA-DAN-TEKA-TEKI-PENGIRIM-PESAN"
+            element={
+              <MIRANDADANTEKATEKIPENGIRIMPESAN></MIRANDADANTEKATEKIPENGIRIMPESAN>
+            }
+          ></Route>
         </Routes>
       </Router>
     </>

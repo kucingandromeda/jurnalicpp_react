@@ -3,14 +3,15 @@
     "judul": "Training of Young Innovation Journalist",
     "penulis": ["Fauzan Prayoga I", "14", "10", "2023"],
     "paragraf": ["nothing system"],
+    "genre": "artikel",
     "url": "Training-of-Young-Innovation-Journalist",
     "img": "image_data/Training of Young Innovation JournalistIMG.png"
   },
   {
-    "judul": "informasi dari pengembang ke dua",
-    "penulis": ["kucing_andromeda", "26", "2", "2024"],
+    "judul": "MIRANDA DAN TEKA-TEKI PENGIRIM PESAN",
+    "penulis": ["kucing_andromeda", "7", "11", "2023"],
     "paragraf": ["dalam tahap pengujian", "masih belum pasti", "dan lain lain"],
-    "url": "informasi-dari-pengembang-ke-dua"
+    "url": "MIRANDA-DAN-TEKA-TEKI-PENGIRIM-PESAN"
   },
   {
     "judul": "testing masih dilanjutkan",
