@@ -9,44 +9,21 @@
   },
   {
     "judul": "MIRANDA DAN TEKA-TEKI PENGIRIM PESAN",
-    "penulis": ["kucing_andromeda", "7", "11", "2023"],
+    "penulis": ["Fauzan Prayoga I", "7", "11", "2023"],
+    "genre": "sastra",
     "paragraf": ["dalam tahap pengujian", "masih belum pasti", "dan lain lain"],
     "url": "MIRANDA-DAN-TEKA-TEKI-PENGIRIM-PESAN"
   },
   {
-    "judul": "testing masih dilanjutkan",
-    "penulis": ["kucing_andromeda", "26", "2", "2024"],
+    "judul": "Karya divisi sastra",
+    "penulis": ["Fauzan Prayoga I", "13", "10", "2023"],
+    "genre": "sastra",
     "paragraf": [
       "dalam tahap pengujian ini diharapkan bagi para kontributor dapat membantu pengembangan",
       "dalam proses development",
       "dan sebagainya"
     ],
-    "url": "informasi-dari-pengembang-ke-dua"
-  },
-  {
-    "judul": "ini adalah berita yang tidak berguna",
-    "penulis": ["kucing_andromeda", "26", "2", "2024"],
-    "paragraf": [
-      "ini adalah testing dari paragraf pertama",
-      "ini testing dari paragraf kedua",
-      "ini yang ketiga"
-    ],
-    "url": "ini-adalah-berita-yang-tidak-berguna"
-  },
-  {
-    "judul": "berita dari manusia",
-    "penulis": ["kucing_andromeda", "26", "2", "2024"],
-    "paragraf": ["dalam tahap pengujian", "masih belum pasti", "dan lain lain"],
-    "url": "berita-dari-manusia"
-  },
-  {
-    "judul": "berita dari ekskull programming(ketuanya hehehe)",
-    "penulis": ["kucing_andromeda", "26", "2", "2024"],
-    "paragraf": [
-      "dalam tahap pengujian ini diharapkan bagi para kontributor dapat membantu pengembangan",
-      "dalam proses development",
-      "dan sebagainya"
-    ],
-    "url": "berita-dari-ekskull-programming(ketuanya hehehe)"
+    "img": "image_data/Karya divisi sastraIMG.png",
+    "url": "Karya-divisi-sastra"
   }
 ]

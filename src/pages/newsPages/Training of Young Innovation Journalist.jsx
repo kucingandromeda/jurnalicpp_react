@@ -1,10 +1,10 @@
-import { HeaderNavNews } from "../compunent/e_newsLook/a_header/headerNav";
+import { HeaderNav } from "../compunent/a_header/headerNav";
 import { Footer } from "../compunent/e_newsLook/c_footer/footer";
 
 export const TrainingofYoungInnovationJournalist = () => {
   return (
     <>
-      <HeaderNavNews></HeaderNavNews>
+      <HeaderNav></HeaderNav>
       <div className="news-area">
         <h1>Training of Young Innovation Journalist</h1>
         {/* <div className="penulis">

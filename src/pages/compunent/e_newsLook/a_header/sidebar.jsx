@@ -23,29 +23,29 @@ export const Sidebar = ({ stat, stat_fn }) => {
       <div className="sidebar-container">
         <ul>
           <li>
-            <a>About</a>
+            <a onClick={() => navigation("pengembangan")}>About</a>
           </li>
           <li>
-            <a>New</a>
+            <a onClick={() => navigation("pengembangan")}>News</a>
           </li>
           <h2>Genre</h2>
           <li>
-            <a>Sastra</a>
+            <a onClick={() => navigation("pengembangan")}>Sastra</a>
           </li>
           <li>
-            <a>Infromasi</a>
+            <a onClick={() => navigation("pengembangan")}>Infromasi</a>
           </li>
           <li>
-            <a>IT</a>
+            <a onClick={() => navigation("pengembangan")}>IT</a>
           </li>
           <li>
-            <a>Politik</a>
+            <a onClick={() => navigation("pengembangan")}>Artikel</a>
           </li>
           <li>
-            <a>Acara</a>
+            <a onClick={() => navigation("pengembangan")}>Acara</a>
           </li>
           <li>
-            <a>Game</a>
+            <a onClick={() => navigation("pengembangan")}>Game</a>
           </li>
         </ul>
       </div>

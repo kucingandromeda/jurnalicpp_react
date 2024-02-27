@@ -1,10 +1,10 @@
-import { HeaderNavNews } from "../compunent/e_newsLook/a_header/headerNav";
+import { HeaderNav } from "../compunent/a_header/headerNav";
 import { Footer } from "../compunent/e_newsLook/c_footer/footer";
 
 export const MIRANDADANTEKATEKIPENGIRIMPESAN = () => {
   return (
     <>
-      <HeaderNavNews></HeaderNavNews>
+      <HeaderNav></HeaderNav>
       <div className="news-area">
         <h1>Training of Young Innovation Journalist</h1>
         {/* <div className="penulis">
@@ -12,11 +12,7 @@ export const MIRANDADANTEKATEKIPENGIRIMPESAN = () => {
         <p>Kucing andromeda</p>
         <p>tgl-mon-thn</p>
       </div> */}
-        <img
-          className="news-image"
-          src={"./image_data/Training of Young Innovation JournalistIMG.png"}
-          alt=""
-        />
+        <img className="news-image" src={"./banner/Nothing image.png"} alt="" />
         <div className="paragraph">
           <p>“Kamu, hidupnya enak banget ya, Mir.”</p>
 

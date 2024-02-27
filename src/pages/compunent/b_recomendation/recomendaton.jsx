@@ -12,8 +12,6 @@ export const Recomendation = () => {
     setData(data.concat(value));
   }, []);
 
-  console.log(data);
-
   return (
     <div className="recomendation-section">
       <h1>Random container</h1>

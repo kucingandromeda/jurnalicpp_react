@@ -11,7 +11,9 @@ export const New = () => {
     const value = [];
 
     for (let i = 0; i < 6; i++) {
-      value.push(dataJson[i]);
+      if (dataJson[i]) {
+        value.push(dataJson[i]);
+      }
     }
 
     setData(data.concat(value));

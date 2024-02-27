@@ -3,9 +3,11 @@ import { Sidebar } from "./sidebar";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { BackBlack } from "./backblack";
+import { useNavigate } from "react-router-dom";
 
 export const HeaderNavNews = () => {
   const [open, setOpen] = useState(false);
+  const navigation = useNavigate();
 
   const closeOpen = () => setOpen((stat) => !stat);
 
@@ -14,6 +16,7 @@ export const HeaderNavNews = () => {
       <BackBlack stat={open}></BackBlack>
       <header className="headerNav">
         <img
+          onClick={() => navigation("/")}
           className="header-nav-logo"
           src="./banner/jurnalicpptiny.png"
           alt=""
