@@ -3,14 +3,27 @@ import { useState } from "react";
 
 export const NewsArea = () => {
   const [dataApi, setDataApi] = useState(null);
+  const [isi, setIsi] = useState(null);
+
+  const coma_fn = (data) => {
+    const resultList = [];
+    data.forEach((element) => {
+      const result = element.value.replace(/{'}/g, '"');
+      resultList.push(result);
+    });
+    setIsi(resultList);
+  };
+
   useEffect(() => {
     fetch(`http://localhost:8000/getData${window.location.pathname}`)
       .then((res) => res.json())
       .then((res) => {
+        coma_fn(res.isi);
         setDataApi(res);
       });
   }, []);
-  console.log(dataApi ? dataApi.isi : null);
+  // console.log(dataApi ? dataApi.isi[0] : null);
+  console.log(isi);
 
   return (
     <div className="news-area">
@@ -22,9 +35,7 @@ export const NewsArea = () => {
       </div> */}
       <img className="news-image" src={"./banner/Nothing image.png"} alt="" />
       <div className="paragraph">
-        {dataApi
-          ? dataApi.isi.map((value, i) => <p key={i}>{value.value}</p>)
-          : ""}
+        {isi ? isi.map((value, i) => <p key={i}>{value}</p>) : ""}
       </div>
     </div>
   );
