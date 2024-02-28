@@ -53,10 +53,10 @@ export const TrainingofYoungInnovationJournalist = () => {
           </p>
 
           <p>
-            "Pelatihan ini kita harapkan mampu meningkatkan soft-skill
+            'Pelatihan ini kita harapkan mampu meningkatkan soft-skill
             teman-teman sekalian dalam teknik pengolahan berita dan
             penyampaiannya, baik itu pengolahan video, pengolahan naskah, dan
-            lainnya," ujarnya. Tak lupa, sebagai ketua Fauzan juga menyematkan
+            lainnya,' ujarnya. Tak lupa, sebagai ketua Fauzan juga menyematkan
             harapan kepada tim Jurnalistik MAN Insan Cendekia Padang Pariaman
             agar lebih optimal kedepannya, terlebih setelah diadakannya
             pelatihan ini.{" "}

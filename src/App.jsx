@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Pengembangan } from "./pages/pengembangan";
-// import { NewsShowing } from "./pages/news";
+import { NewsShowing } from "./pages/template";
 
 ////////url//////////
 import { TrainingofYoungInnovationJournalist } from "./pages/newsPages/Training of Young Innovation Journalist";
@@ -16,7 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>} />
           <Route path="pengembangan" element={<Pengembangan />} />
-          <Route
+
+          <Route path="*" element={<NewsShowing />} />
+
+          {/* <Route
             path="Training-of-Young-Innovation-Journalist"
             element={<TrainingofYoungInnovationJournalist />}
           />
@@ -29,7 +32,7 @@ function App() {
           <Route
             path="Karya-divisi-sastra"
             element={<Karyadivisisastra></Karyadivisisastra>}
-          ></Route>
+          ></Route> */}
         </Routes>
       </Router>
     </>

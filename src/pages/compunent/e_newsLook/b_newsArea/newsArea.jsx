@@ -1,7 +1,20 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 export const NewsArea = () => {
+  const [dataApi, setDataApi] = useState(null);
+  useEffect(() => {
+    fetch(`http://localhost:8000/getData${window.location.pathname}`)
+      .then((res) => res.json())
+      .then((res) => {
+        setDataApi(res);
+      });
+  }, []);
+  console.log(dataApi ? dataApi.isi : null);
+
   return (
     <div className="news-area">
-      <h1>news area guys</h1>
+      <h1>{dataApi ? dataApi.judul : ""}</h1>
       {/* <div className="penulis">
         <p>By:</p>
         <p>Kucing andromeda</p>
@@ -9,16 +22,9 @@ export const NewsArea = () => {
       </div> */}
       <img className="news-image" src={"./banner/Nothing image.png"} alt="" />
       <div className="paragraph">
-        <p>
-          Meski banyak teknologi yang bisa digunakan untuk membuat laman
-          interaktif, Angular vs React adalah dua dari sekian banyak teknologi
-          yang paling ramai diperdebatkan. Para front-end developer sendiri
-          tentu memiliki preferensi tersendiri dalam penggunaannya. Karena
-          berpengaruh pada hasil akhir, klien pun berhak untuk menentukan
-          JavaScript mana yang mau dipakai. Nah, kewajiban bagi para developer
-          dan desainer untuk menjelaskan apa kelebihan dan kekurangan dari
-          JavaScript tersebut.{" "}
-        </p>
+        {dataApi
+          ? dataApi.isi.map((value, i) => <p key={i}>{value.value}</p>)
+          : ""}
       </div>
     </div>
   );
