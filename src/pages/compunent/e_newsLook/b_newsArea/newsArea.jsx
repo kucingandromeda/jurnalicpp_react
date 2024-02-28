@@ -22,8 +22,6 @@ export const NewsArea = () => {
         setDataApi(res);
       });
   }, []);
-  // console.log(dataApi ? dataApi.isi[0] : null);
-  console.log(isi);
 
   return (
     <div className="news-area">
@@ -33,7 +31,11 @@ export const NewsArea = () => {
         <p>Kucing andromeda</p>
         <p>tgl-mon-thn</p>
       </div> */}
-      <img className="news-image" src={"./banner/Nothing image.png"} alt="" />
+      <img
+        className="news-image"
+        src={dataApi ? dataApi.img : "./banner/Nothing image.png"}
+        alt=""
+      />
       <div className="paragraph">
         {isi ? isi.map((value, i) => <p key={i}>{value}</p>) : ""}
       </div>
