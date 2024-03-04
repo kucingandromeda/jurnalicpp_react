@@ -1,5 +1,12 @@
 [
   {
+    "judul": "Berkenalan dengan HTML",
+    "penulis": ["Kucing andromeda", "4", "3", "2024"],
+    "genre": "artikel",
+    "url": "Berkenalan-dengan-HTML",
+    "img": "image_data/Berkenalan dengan HTMLIMG.png"
+  },
+  {
     "judul": "Training of Young Innovation Journalist",
     "penulis": ["Fauzan Prayoga I", "14", "10", "2023"],
     "genre": "artikel",
