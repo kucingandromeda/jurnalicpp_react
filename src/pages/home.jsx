@@ -4,13 +4,13 @@ import { Recomendation } from "./compunent/b_recomendation/recomendaton";
 import { New } from "./compunent/c_new/nex";
 import { Powered } from "./compunent/d_powered/powered";
 
-export const Home = () => {
+export const Home = ({ urlFn }) => {
   return (
     <>
       <HeaderNav></HeaderNav>
       <Head></Head>
       <Recomendation></Recomendation>
-      <New></New>
+      <New urlFn={urlFn}></New>
       <Powered></Powered>
     </>
   );

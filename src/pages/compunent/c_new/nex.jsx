@@ -3,7 +3,7 @@ import dataJson from "./../../../data/newsData.json";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export const New = () => {
+export const New = ({ urlFn }) => {
   const [data, setData] = useState([]);
   const navigation = useNavigate();
 
@@ -20,7 +20,7 @@ export const New = () => {
   }, []);
 
   const getApi = (url) => {
-    console.log(url);
+    urlFn(url, navigation);
   };
 
   return (
