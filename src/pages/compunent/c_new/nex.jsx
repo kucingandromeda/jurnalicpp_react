@@ -19,6 +19,10 @@ export const New = () => {
     setData(data.concat(value));
   }, []);
 
+  const getApi = (url) => {
+    console.log(url);
+  };
+
   return (
     <div className="New-section">
       <h1>News</h1>
@@ -32,7 +36,8 @@ export const New = () => {
           <motion.div
             key={i}
             className="new-conatiner-item"
-            onClick={() => navigation(news.url)}
+            // onClick={() => navigation(news.url)}
+            onClick={() => getApi(news.url)}
           >
             <div className="new-container-canvas">
               <img
