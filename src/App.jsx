@@ -17,23 +17,7 @@ function App() {
   const urlData = (data, navigation) => {
     fetch(`http://localhost:8000/getData/${data}`)
       .then((res) => {
-        const lengthData = res.headers.get("Content-Length");
-
-        const reader = res.body.getReader();
-        let dataDiterima = 0;
-
-        const read = () => {
-          reader.read().then(({ done, value }) => {
-            if (done) {
-              return;
-            }
-            dataDiterima += value.length;
-            read();
-          });
-        };
-        read();
-
-        res.json();
+        return res.json();
       })
       .then((res) => {
         setApiDataApp(res);
