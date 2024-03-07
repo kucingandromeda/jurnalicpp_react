@@ -1,15 +1,18 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-export const NewsArea = () => {
+export const NewsArea = ({ apiData }) => {
   const [dataApi, setDataApi] = useState(null);
-
   useEffect(() => {
-    fetch(`http://localhost:8000/getData${window.location.pathname}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setDataApi(res);
-      });
+    if (apiData) {
+      setDataApi(apiData);
+    } else {
+      fetch(`http://localhost:8000/getData${window.location.pathname}`)
+        .then((res) => res.json())
+        .then((res) => {
+          setDataApi(res);
+        });
+    }
   }, []);
 
   return (
