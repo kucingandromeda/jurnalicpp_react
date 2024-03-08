@@ -8,7 +8,6 @@ import { useState } from "react";
 function App() {
   const [apiDataApp, setApiDataApp] = useState(null);
   const urlData = (data, navigation) => {
-    console.log(`${import.meta.env.VITE_API_URL_SHOW_NEWS}/${data}`);
     fetch(`${import.meta.env.VITE_API_URL_SHOW_NEWS}/${data}`)
       .then((res) => {
         return res.json();
