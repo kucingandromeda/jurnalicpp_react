@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import dataJson from "./../../../data/newsData.json";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -8,15 +7,19 @@ export const New = ({ urlFn }) => {
   const navigation = useNavigate();
 
   useEffect(() => {
-    const value = [];
+    fetch(import.meta.env.VITE_API_URL_NEWSDATA)
+      .then((res) => res.json())
+      .then((res) => {
+        const value = [];
 
-    for (let i = 0; i < 6; i++) {
-      if (dataJson[i]) {
-        value.push(dataJson[i]);
-      }
-    }
+        for (let i = 0; i < 6; i++) {
+          if (res[i]) {
+            value.push(res[i]);
+          }
+        }
 
-    setData(data.concat(value));
+        setData(data.concat(value));
+      });
   }, []);
 
   const getApi = (url) => {
@@ -27,16 +30,10 @@ export const New = ({ urlFn }) => {
     <div className="New-section">
       <h1>News</h1>
       <div className="new-container">
-        {/* <div className="new-conatiner-item">
-          <div className="new-container-img"></div>
-          <h3 className="new-container-desc"></h3>
-        </div> */}
-
         {data.map((news, i) => (
           <motion.div
             key={i}
             className="new-conatiner-item"
-            // onClick={() => navigation(news.url)}
             onClick={() => getApi(news.url)}
           >
             <div className="new-container-canvas">

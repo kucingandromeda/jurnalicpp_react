@@ -15,7 +15,8 @@ function App() {
   const [apiDataApp, setApiDataApp] = useState(null);
   // const navigation = useNavigate();
   const urlData = (data, navigation) => {
-    fetch(`http://localhost:8000/getData/${data}`)
+    console.log(`${import.meta.env.VITE_API_URL_SHOW_NEWS}/${data}`);
+    fetch(`${import.meta.env.VITE_API_URL_SHOW_NEWS}/${data}`)
       .then((res) => {
         return res.json();
       })
