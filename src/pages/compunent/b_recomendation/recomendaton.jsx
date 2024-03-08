@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
-import dataJson from "./../../../data/newsData.json";
 
 export const Recomendation = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const value = [];
-    for (let i = 0; i < 3; i++) {
-      value.push(dataJson[Math.floor(Math.random() * dataJson.length)]);
-    }
-    setData(data.concat(value));
+    fetch(import.meta.env.VITE_API_URL_NEWSDATA)
+      .then((res) => res.json())
+      .then((res) => {
+        const value = [];
+        for (let i = 0; i < 3; i++) {
+          value.push(res[Math.floor(Math.random() * res.length)]);
+        }
+        setData(data.concat(value));
+      });
   }, []);
 
   return (
