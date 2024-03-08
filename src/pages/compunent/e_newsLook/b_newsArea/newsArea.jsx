@@ -8,7 +8,7 @@ export const NewsArea = ({ apiData }) => {
       setDataApi(apiData);
     } else {
       fetch(
-        `${import.meta.env.VITE_API_URL_SHOW_NEWS}/${window.location.pathname}`
+        `${import.meta.env.VITE_API_URL_SHOW_NEWS}${window.location.pathname}`
       )
         .then((res) => res.json())
         .then((res) => {
