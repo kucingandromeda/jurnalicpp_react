@@ -7,7 +7,9 @@ export const NewsArea = ({ apiData }) => {
     if (apiData) {
       setDataApi(apiData);
     } else {
-      fetch(`http://localhost:8000/getData${window.location.pathname}`)
+      fetch(
+        `${import.meta.env.VITE_API_URL_SHOW_NEWS}/${window.location.pathname}`
+      )
         .then((res) => res.json())
         .then((res) => {
           setDataApi(res);
@@ -28,7 +30,7 @@ export const NewsArea = ({ apiData }) => {
         src={
           dataApi
             ? dataApi.img
-              ? `http://localhost:8000/getImg/${dataApi.img}`
+              ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${dataApi.img}`
               : "./banner/Nothing image.png"
             : "./banner/Nothing image.png"
         }
