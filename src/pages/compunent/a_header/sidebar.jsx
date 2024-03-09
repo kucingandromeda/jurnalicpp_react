@@ -35,7 +35,7 @@ export const Sidebar = ({ stat, stat_fn }) => {
             <a onClick={() => navigation("/pengembangan")}>About</a>
           </li>
           <li>
-            <a onClick={() => navigation("/pengembangan")}>News</a>
+            <a onClick={() => navigation("/news")}>News</a>
           </li>
           <h2>Genre</h2>
           <li>

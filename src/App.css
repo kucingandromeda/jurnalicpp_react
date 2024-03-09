@@ -475,3 +475,63 @@ li:hover {
 .pengembangan-logo {
   max-width: 100%;
 }
+
+/* /////newsSection/// */
+.main-news-section {
+  width: 95%;
+  margin: 25px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-news-section-canvas {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main-news-section-canvas-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-news-section-img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-news-section-canvas:hover .main-news-section-img {
+  transform: scale(1.1);
+}
+
+.main-news-section-desc {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.main-news-section-desc h2 {
+  margin: 0 0 0 0;
+}
+
+.main-news-section-desc h3 {
+  margin: 20px 0 10px 0;
+  font-size: 1rem;
+}
+
+.main-news-section-desc p {
+  font-family: "poppins", sans-serif;
+  color: #555555;
+  font-weight: 700;
+}

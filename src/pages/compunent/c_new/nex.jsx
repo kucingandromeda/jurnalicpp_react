@@ -7,7 +7,7 @@ export const New = ({ urlFn }) => {
   const navigation = useNavigate();
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_API_URL_NEWSDATA)
+    fetch(import.meta.env.VITE_API_URL_NEWSDATA + "/all")
       .then((res) => res.json())
       .then((res) => {
         const value = [];
@@ -39,7 +39,11 @@ export const New = ({ urlFn }) => {
             <div className="new-container-canvas">
               <img
                 className="new-container-img"
-                src={news.img ? news.img : "./banner/Nothing image.png"}
+                src={
+                  news.img !== "NULL"
+                    ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${news.img}`
+                    : "./banner/Nothing image.png"
+                }
                 alt={`${news.judul}_img`}
               />
             </div>

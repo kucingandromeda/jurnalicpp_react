@@ -4,6 +4,7 @@ import { Home } from "./pages/home";
 import { Pengembangan } from "./pages/pengembangan";
 import { NewsShowing } from "./pages/template";
 import { useState } from "react";
+import { NewsSection } from "./pages/compunent/f_newsSection/newsSection";
 
 function App() {
   const [apiDataApp, setApiDataApp] = useState(null);
@@ -25,6 +26,8 @@ function App() {
           <Route path="/" element={<Home urlFn={urlData}></Home>} />
 
           <Route path="pengembangan" element={<Pengembangan />} />
+
+          <Route path="/news" element={<NewsSection />} />
 
           <Route path="*" element={<NewsShowing apiData={apiDataApp} />} />
         </Routes>

@@ -23,7 +23,7 @@ export const HeaderNav = () => {
         />
         <nav className="headerNav-nav">
           <a onClick={() => navigation("/pengembangan")}>Genre</a>
-          <a onClick={() => navigation("/pengembangan")}>News</a>
+          <a onClick={() => navigation("/news")}>News</a>
           <a onClick={() => navigation("/pengembangan")}>About</a>
           <motion.img
             whileHover={{ scale: 1.2 }}

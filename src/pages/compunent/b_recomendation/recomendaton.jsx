@@ -4,7 +4,7 @@ export const Recomendation = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_API_URL_NEWSDATA)
+    fetch(import.meta.env.VITE_API_URL_NEWSDATA + "/all")
       .then((res) => res.json())
       .then((res) => {
         const value = [];
