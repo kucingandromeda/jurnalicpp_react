@@ -37,10 +37,12 @@ export const NewsArea = ({ apiData }) => {
         alt=""
       />
       <div className="paragraph">
-        {dataApi
+        {/* {dataApi
           ? dataApi.isi.map((value, i) => (
               <p key={i}>
-                {value.prop ? (
+                {value.type === "subtitle" ? (
+                  <h2>{value.value}</h2>
+                ) : value.prop ? (
                   value.prop.italic ? (
                     <i>{value.value}</i>
                   ) : (
@@ -51,6 +53,24 @@ export const NewsArea = ({ apiData }) => {
                 )}
               </p>
             ))
+          : ""} */}
+        {dataApi
+          ? dataApi.isi.map((value, i) =>
+              value.type === "subtitle" ? (
+                <h2 key={i}>{value.value}</h2>
+              ) : value.prop ? (
+                value.prop.italic ? (
+                  <p key={i}>
+                    {" "}
+                    <i>{value.value}</i>{" "}
+                  </p>
+                ) : (
+                  "ops error"
+                )
+              ) : (
+                <p key={i}>{value.value}</p>
+              )
+            )
           : ""}
       </div>
     </div>

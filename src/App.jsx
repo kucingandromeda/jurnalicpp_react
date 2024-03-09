@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Pengembangan } from "./pages/pengembangan";
 import { NewsShowing } from "./pages/template";
+import { AdminPages } from "./pages/adminPages";
+
 import { useState } from "react";
 import { NewsSection } from "./pages/compunent/f_newsSection/newsSection";
 
@@ -23,6 +25,8 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="admin" element={<AdminPages></AdminPages>} />
+
           <Route path="/" element={<Home urlFn={urlData}></Home>} />
 
           <Route path="pengembangan" element={<Pengembangan />} />
