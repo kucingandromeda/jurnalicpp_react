@@ -4,7 +4,7 @@ export const PublishSYS = () => {
       <h1>Publishing...</h1>
       <form
         id="form"
-        action="http://localhost:8000/admin/publish"
+        action={`${import.meta.env.VITE_API_ADMIN_SYS}`}
         method="POST"
         encType="multipart/form-data"
       >
