@@ -1,20 +1,87 @@
+import { useRef } from "react";
+import { useState } from "react";
+
 export const PublishSYS = () => {
+  const fileInput = useRef(null);
+  const penulisInput = useRef(null);
+  const genreInput = useRef(null);
+  const imgInput = useRef(null);
+
+  const sendData = () => {
+    const form = new FormData();
+    form.append(penulisInput.current.name, penulisInput.current.value);
+    form.append(genreInput.current.name, genreInput.current.value);
+    form.append(imgInput.current.name, imgInput.current.checked);
+
+    for (let i = 0; i < fileInput.current.file.files.length; i++) {
+      const element = fileInput.current.file.files[i];
+      form.append("files", element);
+    }
+
+    fetch(import.meta.env.VITE_API_ADMIN_SYS, {
+      method: "POST",
+      body: form,
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  };
+
+  // const isiInput = (e) => {
+  //   const { name, value } = e.target;
+  //   // setInput({ ...input, [name]: value });
+  // };
+
+  // const isiInputFile = (e) => {
+  //   // console.log(e.target.files);
+  // };
+
   return (
     <>
       <h1>Publishing...</h1>
       <form
         id="form"
-        action={`${import.meta.env.VITE_API_ADMIN_SYS}`}
+        ref={fileInput}
+        // action={`${import.meta.env.VITE_API_ADMIN_SYS}`}
         method="POST"
         encType="multipart/form-data"
       >
-        <input type="file" id="file" name="file" multiple />
+        <input
+          type="file"
+          id="file"
+          name="file"
+          // onChange={isiInputFile}
+          multiple
+        />
         <h2>penulis</h2>
-        <input className="input-txt" type="text" name="penulis" />
+        <input
+          ref={penulisInput}
+          className="input-txt"
+          type="text"
+          name="penulis"
+          // onChange={isiInput}
+        />
         <h2>genre</h2>
-        <input className="input-txt" type="text" name="genre" />
-        <input className="input-submit" type="submit" />
+        <input
+          ref={genreInput}
+          className="input-txt"
+          type="text"
+          name="genre"
+          // onChange={isiInput}
+        />
+        <div>
+          <input name="imgStat" ref={imgInput} type="checkbox" />
+          <span>add img</span>
+        </div>
+        <input
+          onClick={(e) => {
+            e.preventDefault();
+            sendData();
+          }}
+          className="input-submit"
+          type="submit"
+        />
       </form>
+      {/* <button onClick={sendData}>click wkwkw</button> */}
     </>
   );
 };

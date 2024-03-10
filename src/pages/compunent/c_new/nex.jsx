@@ -40,7 +40,7 @@ export const New = ({ urlFn }) => {
               <img
                 className="new-container-img"
                 src={
-                  news.img !== "NULL"
+                  news.img !== null
                     ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${news.img}`
                     : "./banner/Nothing image.png"
                 }
