@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useState } from "react";
 
 export const PublishSYS = () => {
   const fileInput = useRef(null);
@@ -26,39 +25,22 @@ export const PublishSYS = () => {
       .then((res) => console.log(res));
   };
 
-  // const isiInput = (e) => {
-  //   const { name, value } = e.target;
-  //   // setInput({ ...input, [name]: value });
-  // };
-
-  // const isiInputFile = (e) => {
-  //   // console.log(e.target.files);
-  // };
-
   return (
     <>
       <h1>Publishing...</h1>
       <form
         id="form"
         ref={fileInput}
-        // action={`${import.meta.env.VITE_API_ADMIN_SYS}`}
         method="POST"
         encType="multipart/form-data"
       >
-        <input
-          type="file"
-          id="file"
-          name="file"
-          // onChange={isiInputFile}
-          multiple
-        />
+        <input type="file" id="file" name="file" multiple />
         <h2>penulis</h2>
         <input
           ref={penulisInput}
           className="input-txt"
           type="text"
           name="penulis"
-          // onChange={isiInput}
         />
         <h2>genre</h2>
         <input
@@ -66,7 +48,6 @@ export const PublishSYS = () => {
           className="input-txt"
           type="text"
           name="genre"
-          // onChange={isiInput}
         />
         <div>
           <input name="imgStat" ref={imgInput} type="checkbox" />
