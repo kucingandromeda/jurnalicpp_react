@@ -35,7 +35,7 @@ export const MonitoringPopUp = ({ editFn, idTarget }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        setLog(res.status);
+        setLog(res);
       });
   };
 
@@ -43,6 +43,7 @@ export const MonitoringPopUp = ({ editFn, idTarget }) => {
     const form = new FormData();
     form.append("id", idTarget.id);
     form.append("Bjudul", idTarget.Bjudul);
+    form.append("img", idTarget.img);
 
     fetch(import.meta.env.VITE_API_ADMIN_DEL, {
       method: "POST",
@@ -50,7 +51,7 @@ export const MonitoringPopUp = ({ editFn, idTarget }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        setLog(res);
       });
   };
 
@@ -123,6 +124,10 @@ export const MonitoringPopUp = ({ editFn, idTarget }) => {
               >
                 yoi
               </button>
+            </div>
+            <div className="monitoring-log">
+              <h3>LOG</h3>
+              <p>{log ? `${log}` : "-"}</p>
             </div>
           </>
         )}

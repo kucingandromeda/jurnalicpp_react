@@ -22,10 +22,11 @@ export const Monitoring = () => {
     setting.classList.toggle("show");
   };
 
-  const edit = (id, Bjudul, stat) => {
+  const edit = (id, Bjudul, img, stat) => {
     const obj = {
       id: id,
       Bjudul: Bjudul,
+      img: img,
       stat: stat,
     };
     setIdEDit(obj);
@@ -72,13 +73,15 @@ export const Monitoring = () => {
                     <div className="monitoring-setting">
                       <p
                         className="monitoring-edit"
-                        onClick={() => edit(data.id, data.url, "edit")}
+                        onClick={() =>
+                          edit(data.id, data.url, data.img, "edit")
+                        }
                       >
                         EDIT
                       </p>
                       <p
                         className="monitoring-del"
-                        onClick={() => edit(data.id, data.url, "del")}
+                        onClick={() => edit(data.id, data.url, data.img, "del")}
                       >
                         DELETE
                       </p>
