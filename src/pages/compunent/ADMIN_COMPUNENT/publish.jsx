@@ -2,6 +2,7 @@ import "./publish.css";
 
 import { PublishMain } from "./publishMain";
 import { PublishSYS } from "./publishSYS";
+import { Monitoring } from "./monitoring";
 
 export const Publish = () => {
   return (
@@ -12,6 +13,7 @@ export const Publish = () => {
       <div className="publish_fn">
         <PublishSYS></PublishSYS>
       </div>
+      <Monitoring></Monitoring>
     </>
   );
 };

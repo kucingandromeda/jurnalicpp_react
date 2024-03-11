@@ -14,6 +14,8 @@
   max-width: 250px;
 }
 
+/* fn */
+
 .publish_fn {
   width: 100%;
   display: flex;
@@ -41,4 +43,138 @@
   margin: 20px 0 0 0;
   width: 200px;
   height: 50px;
+}
+
+/* monitor */
+
+.monitoring-section {
+  width: 100%;
+  margin: 50px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monitoring-DB {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monitoring-db-newsdata {
+  width: 100%;
+}
+
+.monitoring-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.monitoring-db-newsdata-show {
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px;
+  position: relative;
+}
+
+.monitoring-db-newsdata-show p {
+  margin: 10px 0 10px 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.monitoring-set {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  cursor: pointer;
+}
+
+.monitoring-setting {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.monitoring-edit,
+.monitoring-del {
+  font-weight: 700;
+  cursor: pointer;
+  width: 10px;
+}
+
+.monitoring-del {
+  color: red;
+}
+
+.monitoring-pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  z-index: 100;
+  border: 2px solid rgb(26, 26, 26);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monitoring-pop-up-choose {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monitoring-update {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monitoring-pop-up-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.monitoring-log {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monitoring-log h3 {
+  margin: 20px 0 2px 0;
+}
+
+.monitoring-del {
+  width: 95%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
