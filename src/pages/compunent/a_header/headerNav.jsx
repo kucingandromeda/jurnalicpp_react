@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { BackBlack } from "./backblack";
 
-export const HeaderNav = () => {
+export const HeaderNav = ({ sectionFn }) => {
   const [open, setOpen] = useState(false);
 
   const closeOpen = () => setOpen((stat) => !stat);
@@ -22,8 +22,8 @@ export const HeaderNav = () => {
           alt=""
         />
         <nav className="headerNav-nav">
-          <a onClick={() => navigation("/pengembangan")}>Genre</a>
-          <a onClick={() => navigation("/news")}>News</a>
+          <a onClick={() => sectionFn("news", navigation)}>News</a>
+          <a onClick={() => navigation("/pengembangan")}>Contact</a>
           <a onClick={() => navigation("/pengembangan")}>About</a>
           <motion.img
             whileHover={{ scale: 1.2 }}

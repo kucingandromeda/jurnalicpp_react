@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export const Genre = ({ admin }) => {
+export const Genre = ({ admin, sectionFn }) => {
   const navigation = useNavigate();
 
   return (
@@ -13,12 +13,12 @@ export const Genre = ({ admin }) => {
         ""
       ) : (
         <nav className="genre-container">
-          <a onClick={() => navigation("pengembangan")}>Sastra</a>
-          <a onClick={() => navigation("pengembangan")}>Artikel</a>
-          <a onClick={() => navigation("pengembangan")}>IT</a>
-          <a onClick={() => navigation("pengembangan")}>Politik</a>
-          <a onClick={() => navigation("pengembangan")}>Acara</a>
-          <a onClick={() => navigation("pengembangan")}>Game</a>
+          {/* <a onClick={() => navigation("/sastra")}>Sastra</a> */}
+          <a onClick={() => sectionFn("sastra", navigation)}>Sastra</a>
+          <a onClick={() => sectionFn("artikel", navigation)}>Artikel</a>
+          <a onClick={() => sectionFn("IT", navigation)}>IT</a>
+          <a onClick={() => sectionFn("informasi", navigation)}>Informasi</a>
+          <a onClick={() => sectionFn("hiburan", navigation)}>Hiburan</a>
         </nav>
       )}
     </div>

@@ -1,6 +1,6 @@
 import { Genre } from "./genre";
 
-export const Head = ({ admin }) => {
+export const Head = ({ admin, sectionFn }) => {
   return (
     <>
       <div className="head">
@@ -30,7 +30,7 @@ export const Head = ({ admin }) => {
           />
         </div>
       </div>
-      <Genre admin={admin}></Genre>
+      <Genre admin={admin} sectionFn={sectionFn}></Genre>
     </>
   );
 };

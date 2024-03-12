@@ -76,4 +76,3 @@ export const NewsArea = ({ apiData }) => {
     </div>
   );
 };
-// `http://localhost:8000/getImg/${dataApi.img}`
