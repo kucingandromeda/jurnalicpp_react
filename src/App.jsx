@@ -66,7 +66,10 @@ function App() {
             ></Route>
           ))}
 
-          <Route path="*" element={<NewsShowing apiData={apiDataApp} />} />
+          <Route
+            path="*"
+            element={<NewsShowing sectionFn={sectionFn} apiData={apiDataApp} />}
+          />
 
           <Route path="pengembangan" element={<Pengembangan />} />
         </Routes>

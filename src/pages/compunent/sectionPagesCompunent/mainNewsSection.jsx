@@ -19,8 +19,6 @@ export const MainNewsArea = ({ sectionNews }) => {
     }
   }, [sectionNews]);
 
-  console.log(news);
-
   return (
     <>
       {news ? (

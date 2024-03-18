@@ -388,7 +388,7 @@ li:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 100px 0 10px 0;
+  margin: 100px 0 0 0;
 }
 
 .redekto {
@@ -604,4 +604,104 @@ li:hover {
 .other-news-desc p {
   color: rgb(45, 45, 45);
   margin: 0 0 5px 0;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  background-color: rgb(37, 38, 117);
+}
+
+.footer-logo {
+  margin: 50px 0 50px 50px;
+}
+
+.footer-logo img {
+  max-width: 200px;
+  filter: drop-shadow(0 0 1px rgb(0, 132, 255));
+}
+
+.logo-desc {
+  color: rgba(255, 255, 255, 0.347);
+  margin: 0 0 0 25px;
+  font-size: 0.9rem;
+}
+
+.media {
+  margin: 50px 50px 50px 0;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-direction: column;
+}
+
+.media-logo {
+  margin: 0 25px 0 0;
+}
+
+.discord {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 75px;
+  border-radius: 100%;
+}
+
+.discord img {
+  width: 100%;
+}
+
+.footer-desc {
+  max-width: 300px;
+  margin: 0 25px 25px 0;
+}
+
+.footer-desc p {
+  text-align: end;
+  color: rgba(255, 255, 255, 0.347);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0 0 0;
+  }
+
+  .logo-desc,
+  .logo-desc p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .media {
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .media-logo,
+  .footer-desc {
+    margin: 0;
+  }
+
+  .media p {
+    text-align: center;
+  }
 }
