@@ -19,6 +19,8 @@ export const MainNewsArea = ({ sectionNews }) => {
     }
   }, [sectionNews]);
 
+  console.log(news);
+
   return (
     <>
       {news ? (
@@ -38,8 +40,8 @@ export const MainNewsArea = ({ sectionNews }) => {
                         news
                           ? news[0].img
                             ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${
-                                news[0].img
-                              }`
+                                news[0].url
+                              }/${news[0].img}`
                             : "./banner/Nothing image.png"
                           : ""
                       }

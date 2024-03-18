@@ -19,8 +19,8 @@ export const OtherNewsSection = ({ news }) => {
                       src={
                         newsdata.img
                           ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${
-                              newsdata.img
-                            }`
+                              newsdata.url
+                            }/${newsdata.img}`
                           : "./banner/Nothing image.png"
                       }
                       alt=""

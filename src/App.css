@@ -519,7 +519,7 @@ li:hover {
 }
 
 .main-news-up-to-date-canvas {
-  width: min(80%, 850px);
+  width: min(80%, 700px);
   display: flex;
   justify-content: center;
   align-items: center;
