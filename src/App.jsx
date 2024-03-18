@@ -23,7 +23,7 @@ function App() {
   const urlData = (data, navigation) => {
     fetch(`${import.meta.env.VITE_API_URL_SHOW_NEWS}/${data}`)
       .then((res) => {
-        return res.json();
+        return res.text();
       })
       .then((res) => {
         setApiDataApp(res);

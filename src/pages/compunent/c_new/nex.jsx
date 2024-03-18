@@ -41,7 +41,9 @@ export const New = ({ urlFn }) => {
                 className="new-container-img"
                 src={
                   news.img !== null
-                    ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${news.img}`
+                    ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${news.url}/${
+                        news.img
+                      }`
                     : "./banner/Nothing image.png"
                 }
                 alt={`${news.judul}_img`}
