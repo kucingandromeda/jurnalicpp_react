@@ -1,7 +1,9 @@
 import logo from "./logo/jurnalicpptiny.png";
 import discord from "./logo/discord.png";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+  const navi = useNavigate();
   return (
     <>
       <footer>
@@ -21,9 +23,9 @@ export const Footer = () => {
         </div>
         <div className="media">
           <div className="media-logo">
-            <div className="discord">
+            <a href="https://discord.gg/AhRA6xXs" className="discord">
               <img src={discord} alt="" />
-            </div>
+            </a>
           </div>
           <div className="footer-desc">
             <p>

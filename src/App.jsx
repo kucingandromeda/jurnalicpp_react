@@ -6,6 +6,7 @@ import { Home } from "./pages/home";
 import { Pengembangan } from "./pages/pengembangan";
 import { NewsShowing } from "./pages/template";
 import { AdminPages } from "./pages/adminPages";
+import { Loginsingin } from "./pages/loginsingin";
 
 import { SectionPages } from "./pages/sectionPages";
 
@@ -45,9 +46,6 @@ function App() {
     <>
       <Router>
         <Routes>
-          {/* admin */}
-          <Route path="admin" element={<AdminPages></AdminPages>} />
-
           {/* home */}
           <Route
             path="/"
@@ -70,6 +68,11 @@ function App() {
             path="*"
             element={<NewsShowing sectionFn={sectionFn} apiData={apiDataApp} />}
           />
+
+          {/* login and other */}
+
+          <Route path="/login" element={<Loginsingin></Loginsingin>}></Route>
+          <Route path="/signin" element={<Loginsingin></Loginsingin>}></Route>
 
           <Route path="pengembangan" element={<Pengembangan />} />
         </Routes>

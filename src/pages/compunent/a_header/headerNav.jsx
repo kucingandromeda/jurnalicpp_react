@@ -23,8 +23,9 @@ export const HeaderNav = ({ sectionFn }) => {
         />
         <nav className="headerNav-nav">
           <a onClick={() => sectionFn("news", navigation)}>News</a>
-          <a onClick={() => navigation("/pengembangan")}>Contact</a>
-          <a onClick={() => navigation("/pengembangan")}>About</a>
+          <a onClick={() => navigation("/pengembangan")}>More</a>
+          <a onClick={() => navigation("/signin")}>Sign in</a>
+          <a onClick={() => navigation("/login")}>Log in</a>
           <motion.img
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 1.1 }}
