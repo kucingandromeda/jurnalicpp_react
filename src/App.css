@@ -716,7 +716,7 @@ footer {
 }
 
 .login-body {
-  width: 50%;
+  width: 60%;
   height: 100vh;
   background-color: white;
   display: flex;
@@ -730,19 +730,23 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 black;
 }
 
 .login-form input {
   width: 350px;
   height: 25px;
+  margin: 5px 15px 5px 15px;
 }
 
 .login-form h2 {
-  margin: 20px 0 5px 0;
+  margin: 20px 10px 5px 10px;
 }
 
 .login-form p {
-  margin: 5px 0 5px 0;
+  margin: 5px 15px 5px 15px;
 }
 
 .log-hidden {
@@ -754,9 +758,20 @@ footer {
 }
 
 .login-img {
-  width: 50%;
+  width: 40%;
   height: 100vh;
-  background-color: rgb(160, 228, 241);
+  background-color: #a0e4f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-img-canvas {
+  max-width: 500px;
+}
+
+.login-img-canvas img {
+  width: 100%;
 }
 
 .login-button-back {

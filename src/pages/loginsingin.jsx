@@ -131,8 +131,15 @@ export const Loginsingin = () => {
               </span>
             </h3>
           )}
+          <h3 style={{ cursor: "pointer" }} onClick={() => navi("/")}>
+            kembali
+          </h3>
         </div>
-        <div className="login-img"></div>
+        <div className="login-img">
+          <div className="login-img-canvas">
+            <img src={`banner/${type}.png`} alt="" />
+          </div>
+        </div>
       </div>
     </>
   );
