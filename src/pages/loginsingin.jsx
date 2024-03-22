@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { LoginsinginLog } from "./compunent/loginsigninCompunent/log";
+
 export const Loginsingin = () => {
   const [type, setType] = useState("");
   const navi = useNavigate();
+
   useEffect(() => {
     setType(window.location.pathname.replace("/", ""));
   }, [window.location.pathname]);
@@ -47,9 +50,43 @@ export const Loginsingin = () => {
     }
   };
 
+  const [logPopup, setLogPopup] = useState(false);
+  const [errorLog, setErrorLog] = useState("");
+  const setLogPopUpStat = (stat) => {
+    setLogPopup(stat);
+  };
+
   const submit = () => {
     if (!enter) return;
-    console.log(pass);
+    const form = new FormData();
+    form.append("name", name);
+    form.append("pass", pass);
+
+    type === "login"
+      ? fetch(import.meta.env.VITE_API_LOGIN, {
+          method: "POST",
+          body: form,
+          credentials: "include",
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            if (res !== "suksess") {
+              setErrorLog(res.servertext);
+              setLogPopUpStat(true);
+            }
+          })
+      : fetch(import.meta.env.VITE_API_SIGNIN, {
+          method: "POST",
+          body: form,
+          credentials: "include",
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            if (res !== "suksess") {
+              setErrorLog(res.servertext);
+              setLogPopUpStat(true);
+            }
+          });
   };
 
   return (
@@ -140,6 +177,11 @@ export const Loginsingin = () => {
             <img src={`banner/${type}.png`} alt="" />
           </div>
         </div>
+        <LoginsinginLog
+          logPopup={logPopup}
+          setLogPopUpStat={setLogPopUpStat}
+          errorLog={errorLog}
+        ></LoginsinginLog>
       </div>
     </>
   );

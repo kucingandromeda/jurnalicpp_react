@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import close from "./source/x.svg";
 
-export const Sidebar = ({ stat, stat_fn }) => {
+export const Sidebar = ({ stat, stat_fn, akunName }) => {
   const navigation = useNavigate();
 
   return (
@@ -31,12 +31,29 @@ export const Sidebar = ({ stat, stat_fn }) => {
       <img className="sidebar-logo" src="./banner/jurnalicpptiny.png" alt="" />
       <div className="sidebar-container">
         <ul>
+          {akunName ? (
+            <li>
+              <a>{akunName}</a>
+            </li>
+          ) : (
+            <>
+              {" "}
+              <li>
+                <a onClick={() => navigation("/login")}>Login</a>
+              </li>
+              <li>
+                <a onClick={() => navigation("/signin")}>Sign in</a>
+              </li>
+            </>
+          )}
+
           <li>
             <a onClick={() => navigation("/pengembangan")}>About</a>
           </li>
           <li>
             <a onClick={() => navigation("/news")}>News</a>
           </li>
+
           <h2>Genre</h2>
           <li>
             <a onClick={() => navigation("/pengembangan")}>Sastra</a>
