@@ -498,6 +498,30 @@ li:hover {
   margin: 20px 15px 20px 15px;
 }
 
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0 0 0;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+}
+
+.rating-container img {
+  width: 50px;
+  margin: 25px 5px 25px 5px;
+  cursor: pointer;
+}
+
 .footer-section {
   width: 100%;
   background-color: rgb(245, 245, 245);
