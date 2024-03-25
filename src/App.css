@@ -753,7 +753,6 @@ footer {
 /* LOGIN */
 .login {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -762,7 +761,6 @@ footer {
 
 .login-body {
   width: 60%;
-  height: 100vh;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -791,8 +789,39 @@ footer {
 }
 
 .login-form p {
+  font-size: 0.7rem;
   margin: 5px 15px 5px 15px;
   color: rgb(161, 0, 0);
+}
+
+.name-form,
+.pass-form,
+.gmail-form,
+.verif-form {
+  width: 95%;
+}
+
+.email-div {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.email-inpt {
+  width: 275px !important;
+}
+
+.email-div button {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 213, 255);
+  border-radius: 5px;
+  background-color: white;
 }
 
 .log-hidden {
@@ -876,7 +905,6 @@ footer {
 @media (max-width: 768px) {
   .login {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -886,7 +914,6 @@ footer {
 
   .login-body {
     width: 100%;
-    height: 60vh;
     background-color: white;
     display: flex;
     justify-content: center;
