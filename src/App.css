@@ -50,7 +50,7 @@ p {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: rgb(160, 228, 241);
+  background-color: rgb(126, 166, 244);
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -260,7 +260,7 @@ li:hover {
 
 .Genre-section {
   width: 100%;
-  background-color: rgb(126, 166, 244);
+  background-color: rgb(160, 228, 241);
   margin: 0 0 25px 0;
   display: flex;
   justify-content: center;
@@ -806,7 +806,7 @@ footer {
 .login-img {
   width: 40%;
   height: 100vh;
-  background-color: rgb(126, 166, 244);
+  background-color: #a0e4f1;
   display: flex;
   justify-content: center;
   align-items: center;
