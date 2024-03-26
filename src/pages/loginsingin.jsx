@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { LoginsinginLog } from "./compunent/loginsigninCompunent/log";
+import send from "./compunent/loginsigninCompunent/source/send.svg";
 
 export const Loginsingin = () => {
   const [type, setType] = useState("");
@@ -18,10 +19,13 @@ export const Loginsingin = () => {
   const [pass, setPass] = useState("");
   const [passLog, setPassLog] = useState("-");
 
+  const [email, setEmail] = useState("");
+
   const [enter, setEnter] = useState(false);
 
   const inputName = useRef(null);
   const inputPass = useRef(null);
+  const inputEmail = useRef(null);
 
   const validationFn = () => {
     let value = inputName.current.value;
@@ -54,6 +58,25 @@ export const Loginsingin = () => {
   const [errorLog, setErrorLog] = useState("");
   const setLogPopUpStat = (stat) => {
     setLogPopup(stat);
+  };
+
+  const gmailFn = () => {
+    const emailValue = inputEmail.current.value;
+    setEmail(emailValue);
+  };
+
+  const getVerif = () => {
+    const form = new FormData();
+    form.append("email", email);
+    fetch("http://localhost:8000/getVerif", {
+      method: "POST",
+      body: form,
+      credentials: "include",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
   };
 
   const submit = () => {
@@ -106,6 +129,7 @@ export const Loginsingin = () => {
               />
               <p className={nameLog === "-" ? "log-hidden" : ""}>{nameLog}</p>
             </div>
+
             <div className="pass-form">
               <h2>password</h2>
               <input
@@ -117,6 +141,52 @@ export const Loginsingin = () => {
               />
               <p className={passLog === "-" ? "log-hidden" : ""}>{passLog}</p>
             </div>
+
+            <div className="gmail-form">
+              <h2>Gmail</h2>
+              <div className="email-div">
+                <input
+                  ref={inputEmail}
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="email-inpt"
+                  onChange={gmailFn}
+                />
+                <motion.button
+                  variants={{
+                    true: { opacity: 1 },
+                    false: {
+                      opacity: 0.3,
+                    },
+                  }}
+                  animate={email !== "" ? "true" : "false"}
+                  whileHover={
+                    email !== "" ? { backgroundColor: "rgb(0, 238, 255)" } : {}
+                  }
+                  onClick={getVerif}
+                >
+                  <img src={send} alt="send code" />
+                </motion.button>
+              </div>
+              <p style={{ color: "black" }}>
+                jangan lupa minta code verifikasi di bagian kanan
+              </p>
+            </div>
+
+            <div className="verif-form">
+              <h2>verification code</h2>
+              <input
+                type="text"
+                name="verif"
+                id="verif"
+                // onChange={validationFn}
+              />
+              <p style={{ color: "black" }}>
+                verification code akan expired setelah 10 menit dikirim
+              </p>
+            </div>
+
             <motion.button
               variants={{
                 true: {
