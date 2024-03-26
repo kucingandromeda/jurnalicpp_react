@@ -83,7 +83,6 @@ export const NewsArea = ({ apiData }) => {
             setRateLoad(false);
             setRateHidden(true);
             setStaticRate(rating);
-            console.log(res);
           });
       });
   };
