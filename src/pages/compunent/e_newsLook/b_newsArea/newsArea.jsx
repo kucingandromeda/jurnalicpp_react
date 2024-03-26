@@ -32,7 +32,7 @@ export const NewsArea = ({ apiData }) => {
             form.append("user", res.nama_akun);
             form.append("judul", resJSON[0].judul);
 
-            fetch("http://localhost:8000/checkRate", {
+            fetch(import.meta.env.VITE_API_CHECK_RATE, {
               method: "POST",
               credentials: "include",
               body: form,
@@ -72,7 +72,7 @@ export const NewsArea = ({ apiData }) => {
         form.append("judul", dataFromDb[0].judul);
         form.append("rating", rating);
 
-        fetch("http://localhost:8000/rating", {
+        fetch(import.meta.env.VITE_API_RATING, {
           method: "POST",
           credentials: "include",
           body: form,
@@ -90,7 +90,6 @@ export const NewsArea = ({ apiData }) => {
   return (
     <>
       <div className="news-area">
-        {/* {dataFromDb ? dataFromDb[0].judul : "load"} */}
         <h1>{dataFromDb ? dataFromDb[0].judul : "loading"}</h1>
         <img
           className="news-image"

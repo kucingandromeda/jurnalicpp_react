@@ -98,7 +98,7 @@ export const Loginsingin = () => {
     setLogPopUpStat(true);
     const form = new FormData();
     form.append("email", email);
-    fetch("http://localhost:8000/getVerif", {
+    fetch(import.meta.env.VITE_API_GET_VERIF, {
       method: "POST",
       body: form,
       credentials: "include",
@@ -118,7 +118,7 @@ export const Loginsingin = () => {
     form.append("name", name);
     form.append("pass", pass);
     form.append("email", email);
-    form.append("verify", inputVerify.current.value);
+    type !== "login" ? form.append("verify", inputVerify.current.value) : null;
 
     type === "login"
       ? fetch(import.meta.env.VITE_API_LOGIN, {
@@ -177,51 +177,65 @@ export const Loginsingin = () => {
               <p className={passLog === "-" ? "log-hidden" : ""}>{passLog}</p>
             </div>
 
-            <div className="gmail-form">
-              <h2>Gmail</h2>
-              <div className="email-div">
-                <input
-                  ref={inputEmail}
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="email-inpt"
-                  onChange={gmailFn}
-                />
-                <motion.button
-                  variants={{
-                    true: { opacity: 1 },
-                    false: {
-                      opacity: 0.3,
-                    },
-                  }}
-                  animate={email !== "" ? "true" : "false"}
-                  whileHover={
-                    email !== "" ? { backgroundColor: "rgb(0, 238, 255)" } : {}
-                  }
-                  onClick={getVerif}
-                >
-                  <img src={send} alt="send code" />
-                </motion.button>
-              </div>
-              <p style={{ color: "black" }}>
-                {emailState ? emailLog : emailLog + timeOut}
-              </p>
-            </div>
+            {type !== "login" ? (
+              <>
+                <div className="gmail-form">
+                  <h2>Gmail</h2>
+                  <div className="email-div">
+                    <input
+                      ref={inputEmail}
+                      type="email"
+                      name="email"
+                      id="email"
+                      className="email-inpt"
+                      onChange={gmailFn}
+                    />
+                    <motion.button
+                      variants={{
+                        true: { opacity: 1 },
+                        false: {
+                          opacity: 0.3,
+                        },
+                      }}
+                      animate={email !== "" ? "true" : "false"}
+                      whileHover={
+                        email !== ""
+                          ? { backgroundColor: "rgb(0, 238, 255)" }
+                          : {}
+                      }
+                      onClick={getVerif}
+                    >
+                      <img src={send} alt="send code" />
+                    </motion.button>
+                  </div>
+                  <p style={{ color: "black" }}>
+                    {emailState ? emailLog : emailLog + timeOut}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
 
-            <div className="verif-form">
-              <h2>verification code</h2>
-              <input
-                ref={inputVerify}
-                type="text"
-                name="verif"
-                id="verif"
-                // onChange={validationFn}
-              />
-              <p style={{ color: "black" }}>
-                verification code akan expired setelah 10 menit dikirim
-              </p>
-            </div>
+            {type !== "login" ? (
+              <>
+                <div className="verif-form">
+                  <h2>verification code</h2>
+                  <input
+                    ref={inputVerify}
+                    type="text"
+                    name="verif"
+                    id="verif"
+                    // onChange={validationFn}
+                  />
+                  <p style={{ color: "black" }}>
+                    verification code akan expired setelah 10 menit dikirim
+                  </p>
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
 
             <motion.button
               variants={{
@@ -249,7 +263,7 @@ export const Loginsingin = () => {
               className="login-button"
               onClick={submit}
             >
-              <h3>LOG IN</h3>
+              <h3>{type === "login" ? "LOG IN" : "SIGN IN"}</h3>
             </motion.button>
           </div>
 
