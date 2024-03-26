@@ -20,12 +20,21 @@ export const Loginsingin = () => {
   const [passLog, setPassLog] = useState("-");
 
   const [email, setEmail] = useState("");
+  const [emailLog, setEmailLog] = useState(
+    "jangan lupa minta code verifikasi di bagian kanan"
+  );
+
+  const emailStatic = useRef(null);
+  const [emailState, setEmailState] = useState(true);
+  const [emailTime, setEmailTime] = useState(30);
+  const [emailTimeMinus, setEmailTimeMinus] = useState(0);
 
   const [enter, setEnter] = useState(false);
 
   const inputName = useRef(null);
   const inputPass = useRef(null);
   const inputEmail = useRef(null);
+  const inputVerify = useRef(null);
 
   const validationFn = () => {
     let value = inputName.current.value;
@@ -66,6 +75,27 @@ export const Loginsingin = () => {
   };
 
   const getVerif = () => {
+    if (!emailState) return;
+    setEmailState(false);
+    setEmailLog(`kirim ulang dalam `);
+    let count = 0;
+
+    clearInterval(emailStatic.current);
+    emailStatic.current = setInterval(() => {
+      if (count === 30) {
+        setEmailState(true);
+        setEmailLog("kirim ulang");
+        setEmailTimeMinus(0);
+        clearInterval(emailStatic.current);
+      } else {
+        setEmailTimeMinus((num) => num + 1);
+        setEmailLog(`kirim ulang dalam `);
+        count += 1;
+      }
+    }, 1000);
+
+    setErrorLog("sending...");
+    setLogPopUpStat(true);
     const form = new FormData();
     form.append("email", email);
     fetch("http://localhost:8000/getVerif", {
@@ -75,15 +105,20 @@ export const Loginsingin = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        setErrorLog(res.servertext);
+        setLogPopUpStat(true);
       });
   };
+
+  let timeOut = emailTime - emailTimeMinus;
 
   const submit = () => {
     if (!enter) return;
     const form = new FormData();
     form.append("name", name);
     form.append("pass", pass);
+    form.append("email", email);
+    form.append("verify", inputVerify.current.value);
 
     type === "login"
       ? fetch(import.meta.env.VITE_API_LOGIN, {
@@ -170,13 +205,14 @@ export const Loginsingin = () => {
                 </motion.button>
               </div>
               <p style={{ color: "black" }}>
-                jangan lupa minta code verifikasi di bagian kanan
+                {emailState ? emailLog : emailLog + timeOut}
               </p>
             </div>
 
             <div className="verif-form">
               <h2>verification code</h2>
               <input
+                ref={inputVerify}
                 type="text"
                 name="verif"
                 id="verif"
