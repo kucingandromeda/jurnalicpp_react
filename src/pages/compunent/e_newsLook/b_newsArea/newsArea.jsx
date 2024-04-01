@@ -14,6 +14,7 @@ export const NewsArea = ({ apiData }) => {
   const [staticRate, setStaticRate] = useState(0);
 
   const [nama_akun, setNama_akun] = useState("");
+  const smile = ":)";
 
   const navi = useNavigate();
 
@@ -144,7 +145,7 @@ export const NewsArea = ({ apiData }) => {
               <img style={{ maxWidth: 75 }} src={loading} alt="loading" />
             ) : (
               <h2 style={rateHidden ? { opacity: 1 } : { opacity: 0 }}>
-                THX for your rate
+                THX for your rating {smile}
               </h2>
             )}
           </div>
