@@ -5,7 +5,6 @@ import { useRef, useState } from "react";
 import { Home } from "./pages/home";
 import { Pengembangan } from "./pages/pengembangan";
 import { NewsShowing } from "./pages/template";
-import { AdminPages } from "./pages/adminPages";
 import { Loginsingin } from "./pages/loginsingin";
 
 import { SectionPages } from "./pages/sectionPages";

@@ -1,12 +1,13 @@
-import menu from "./source/menu.svg";
-import user from "./source/user.svg";
+import "./navbar.css";
+import menu from "./compunent/source/menu.svg";
+import user from "./compunent/source/user.svg";
 import { useNavigate } from "react-router-dom";
-import { Sidebar } from "./sidebar";
+import { Sidebar } from "./compunent/sidebar";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { BackBlack } from "./backblack";
+import { BackBlack } from "./compunent/backblack";
 
-export const HeaderNav = ({ sectionFn }) => {
+export const Navbar = ({ sectionFn }) => {
   const [open, setOpen] = useState(false);
 
   const closeOpen = () => setOpen((stat) => !stat);

@@ -1,3 +1,4 @@
+import "./recomendation.css";
 import { useEffect, useState } from "react";
 
 export const Recomendation = () => {

@@ -1,6 +1,6 @@
-import { HeaderNav } from "./compunent/a_header/headerNav";
-import { Head } from "./compunent/a_head/head";
-import { Recomendation } from "./compunent/b_recomendation/recomendaton";
+import { Navbar } from "./compunent/navbar_compunent/Navbar";
+import { Bennar } from "./compunent/bennar_compunent/Bennar";
+import { Recomendation } from "./compunent/recomendation_compunent/Recomendaton";
 import { New } from "./compunent/c_new/nex";
 import { Powered } from "./compunent/d_powered/powered";
 import { Footer } from "./compunent/footer/footer";
@@ -9,8 +9,8 @@ import { AdsArea } from "./compunent/e_newsLook/b_newsArea/ads_area";
 export const Home = ({ urlFn, sectionFn }) => {
   return (
     <>
-      <HeaderNav sectionFn={sectionFn}></HeaderNav>
-      <Head sectionFn={sectionFn}></Head>
+      <Navbar sectionFn={sectionFn}></Navbar>
+      <Bennar sectionFn={sectionFn}></Bennar>
       <Recomendation></Recomendation>
       <New urlFn={urlFn}></New>
       <AdsArea></AdsArea>

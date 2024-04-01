@@ -1,6 +1,7 @@
-import { Genre } from "./genre";
+import "./banner.css";
+import { Genre } from "./compunent/genre";
 
-export const Head = ({ admin, sectionFn }) => {
+export const Bennar = ({ admin, sectionFn }) => {
   return (
     <>
       <div className="head">

@@ -1,0 +1,27 @@
+.recomendation-section {
+  width: 100%;
+  margin: 0 0 0 0;
+}
+
+.recomendation-section h1 {
+  margin: 0 0 20px 30px;
+  font-size: 2.2rem;
+}
+
+.recomendation-container {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(160, 227, 241, 0.242);
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.recomendation-item {
+  border: 1px solid black;
+  max-width: 25%;
+  /* height: 170px; */
+  margin: 50px 30px 50px 30px;
+  border-radius: 10px;
+  display: inline-block;
+}
