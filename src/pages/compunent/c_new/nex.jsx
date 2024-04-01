@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArtikelItem } from "../articleItem/artikelItem";
 
 export const New = ({ urlFn }) => {
   const [data, setData] = useState([]);
@@ -31,26 +32,7 @@ export const New = ({ urlFn }) => {
       <h1>News</h1>
       <div className="new-container">
         {data.map((news, i) => (
-          <motion.div
-            key={i}
-            className="new-conatiner-item"
-            onClick={() => getApi(news.url)}
-          >
-            <div className="new-container-canvas">
-              <img
-                className="new-container-img"
-                src={
-                  news.img !== null
-                    ? `${import.meta.env.VITE_API_URL_GET_IMAGE}/${news.url}/${
-                        news.img
-                      }`
-                    : "./banner/Nothing image.png"
-                }
-                alt={`${news.judul}_img`}
-              />
-            </div>
-            <h3 className="new-container-desc">{news.judul}</h3>
-          </motion.div>
+          <ArtikelItem news={news} i={i} getApi={getApi} key={i}></ArtikelItem>
         ))}
       </div>
     </div>

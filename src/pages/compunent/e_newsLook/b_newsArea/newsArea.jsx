@@ -110,38 +110,44 @@ export const NewsArea = ({ apiData }) => {
             dangerouslySetInnerHTML={{ __html: dataApi }}
           ></div>
         ) : null}
+
         <div className="rating">
-          <h2>Rate this article</h2>
+          <img src="./banner/rating_img.png" alt="" />
           <div className="rating-container">
-            <img
-              onMouseMove={() => setRating(1)}
-              onMouseLeave={() => setRating(staticRate)}
-              onClick={rateFn}
-              src={rating >= 1 ? starYellow : star}
-              alt="star"
-            />
-            <img
-              onMouseMove={() => setRating(2)}
-              onMouseLeave={() => setRating(staticRate)}
-              onClick={rateFn}
-              src={rating >= 2 ? starYellow : star}
-              alt="star"
-            />
-            <img
-              onMouseMove={() => setRating(3)}
-              onMouseLeave={() => setRating(staticRate)}
-              onClick={rateFn}
-              src={rating >= 3 ? starYellow : star}
-              alt="star"
-            />
+            <h2>Rate this article</h2>
+
+            <div className="star-container">
+              <img
+                onMouseMove={() => setRating(1)}
+                onMouseLeave={() => setRating(staticRate)}
+                onClick={rateFn}
+                src={rating >= 1 ? starYellow : star}
+                alt="star"
+              />
+              <img
+                onMouseMove={() => setRating(2)}
+                onMouseLeave={() => setRating(staticRate)}
+                onClick={rateFn}
+                src={rating >= 2 ? starYellow : star}
+                alt="star"
+              />
+              <img
+                onMouseMove={() => setRating(3)}
+                onMouseLeave={() => setRating(staticRate)}
+                onClick={rateFn}
+                src={rating >= 3 ? starYellow : star}
+                alt="star"
+              />
+            </div>
+
+            {rateLoad ? (
+              <img style={{ maxWidth: 75 }} src={loading} alt="loading" />
+            ) : (
+              <h2 style={rateHidden ? { opacity: 1 } : { opacity: 0 }}>
+                THX for your rate
+              </h2>
+            )}
           </div>
-          {rateLoad ? (
-            <img style={{ maxWidth: 75 }} src={loading} alt="loading" />
-          ) : (
-            <h2 style={rateHidden ? { opacity: 1 } : { opacity: 0 }}>
-              THX for your rate
-            </h2>
-          )}
         </div>
       </div>
     </>

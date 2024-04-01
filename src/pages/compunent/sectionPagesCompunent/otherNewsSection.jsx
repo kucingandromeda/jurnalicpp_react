@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { ArtikelItem } from "../articleItem/artikelItem";
 
 export const OtherNewsSection = ({ news }) => {
+  console.log(news);
   const navi = useNavigate();
   return (
     <>
