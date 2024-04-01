@@ -1,0 +1,26 @@
+.powered-section {
+  width: 100%;
+  background-color: rgb(74, 77, 231);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0 0 0;
+}
+
+.redekto {
+  font-family: kanit, sans-serif;
+}
+
+/* ////random screen//// */
+
+@media (max-width: 550px) {
+  .recomendation-item:nth-child(3) {
+    display: none;
+  }
+
+  .recomendation-item {
+    max-width: 75%;
+  }
+}

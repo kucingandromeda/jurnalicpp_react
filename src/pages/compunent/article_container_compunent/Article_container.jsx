@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArtikelItem } from "../articleItem/artikelItem";
+import { ArtikelItem } from "../article_item/artikelItem";
 
-export const New = ({ urlFn }) => {
+export const ArticleContainer = ({ urlFn }) => {
   const [data, setData] = useState([]);
   const navigation = useNavigate();
 

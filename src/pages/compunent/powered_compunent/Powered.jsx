@@ -1,3 +1,5 @@
+import "./powered.css";
+
 export const Powered = () => {
   return (
     <div className="powered-section">

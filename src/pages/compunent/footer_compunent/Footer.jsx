@@ -1,3 +1,4 @@
+import "./footer.css";
 import logo from "./logo/jurnalicpptiny.png";
 import discord from "./logo/discord.png";
 import { useNavigate } from "react-router-dom";

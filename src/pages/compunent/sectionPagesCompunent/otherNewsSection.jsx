@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ArtikelItem } from "../articleItem/artikelItem";
+import { ArtikelItem } from "../article_item/artikelItem";
 
 export const OtherNewsSection = ({ news }) => {
   console.log(news);

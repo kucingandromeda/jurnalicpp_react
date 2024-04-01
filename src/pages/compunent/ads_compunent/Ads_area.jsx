@@ -1,5 +1,5 @@
-import "./css.css";
-import { NativeAds } from "../../ads/nativeAds";
+import "./ads_area.css";
+import { NativeAds } from "./compunent/nativeAds";
 
 export const AdsArea = () => {
   return (

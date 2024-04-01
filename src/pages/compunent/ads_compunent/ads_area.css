@@ -1,0 +1,12 @@
+.template-ads-area {
+  margin: 0 0 200px 0;
+  width: min(95%, 600px);
+  border-top: 1px solid black;
+  position: relative;
+}
+
+.template-ads-area h3 {
+  position: absolute;
+  left: 0;
+  top: -50px;
+}

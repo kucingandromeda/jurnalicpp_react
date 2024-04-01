@@ -1,6 +1,6 @@
 import { Navbar } from "./compunent/navbar_compunent/Navbar";
 import { MainNewsArea } from "./compunent/sectionPagesCompunent/mainNewsSection";
-import { Footer } from "./compunent/footer/footer";
+import { Footer } from "./compunent/footer_compunent/Footer";
 import { Bennar } from "./compunent/bennar_compunent/Bennar";
 
 export const SectionPages = ({ sectionFn, sectionNews }) => {
