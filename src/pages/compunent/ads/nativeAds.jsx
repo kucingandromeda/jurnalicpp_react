@@ -6,6 +6,8 @@ export const NativeAds = () => {
     const script = document.createElement("script");
     script.async = "async";
     script.setAttribute("data-cfasync", false);
+    script.src =
+      "//pl22944050.profitablegatecpm.com/39158969dbde6d27fa3d4876361aeb23/invoke.js";
     target.current.append(script);
 
     const div = document.createElement("div");
