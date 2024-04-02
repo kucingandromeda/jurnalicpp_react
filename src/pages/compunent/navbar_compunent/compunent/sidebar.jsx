@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import close from "./source/x.svg";
 
-export const Sidebar = ({ stat, stat_fn, akunName }) => {
-  const navigation = useNavigate();
+export const Sidebar = ({ stat, stat_fn, akunName, sectionFn }) => {
+  const navi = useNavigate();
 
   return (
     <motion.div
@@ -48,7 +48,7 @@ export const Sidebar = ({ stat, stat_fn, akunName }) => {
           )}
 
           <li>
-            <a onClick={() => navigation("/pengembangan")}>About</a>
+            {/* <a onClick={() => navigation("/pengembangan")}>About</a> */}
           </li>
           <li>
             <a onClick={() => navigation("/news")}>News</a>
@@ -56,22 +56,54 @@ export const Sidebar = ({ stat, stat_fn, akunName }) => {
 
           <h2>Genre</h2>
           <li>
-            <a onClick={() => navigation("/pengembangan")}>Sastra</a>
+            <a
+              onClick={() => {
+                sectionFn("sastra", navi);
+                stat_fn();
+              }}
+            >
+              Sastra
+            </a>
           </li>
           <li>
-            <a onClick={() => navigation("/pengembangan")}>Infromasi</a>
+            <a
+              onClick={() => {
+                sectionFn("informasi", navi);
+                stat_fn();
+              }}
+            >
+              Infromasi
+            </a>
           </li>
           <li>
-            <a onClick={() => navigation("/pengembangan")}>IT</a>
+            <a
+              onClick={() => {
+                sectionFn("artikel", navi);
+                stat_fn();
+              }}
+            >
+              Artikel
+            </a>
           </li>
           <li>
-            <a onClick={() => navigation("/pengembangan")}>Artikel</a>
+            <a
+              onClick={() => {
+                sectionFn("hiburan", navi);
+                stat_fn();
+              }}
+            >
+              Hiburan
+            </a>
           </li>
           <li>
-            <a onClick={() => navigation("/pengembangan")}>Acara</a>
-          </li>
-          <li>
-            <a onClick={() => navigation("/pengembangan")}>Game</a>
+            <a
+              onClick={() => {
+                sectionFn("IT", navi);
+                stat_fn();
+              }}
+            >
+              IT
+            </a>
           </li>
         </ul>
       </div>

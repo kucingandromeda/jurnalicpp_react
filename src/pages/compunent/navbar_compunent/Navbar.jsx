@@ -64,7 +64,7 @@ export const Navbar = ({ sectionFn }) => {
           />
 
           <a onClick={() => sectionFn("news", navigation)}>News</a>
-          <a onClick={() => navigation("/pengembangan")}>More</a>
+          {/* <a onClick={() => navigation("/pengembangan")}>More</a> */}
           {akunName ? (
             <>
               <div
@@ -97,7 +97,12 @@ export const Navbar = ({ sectionFn }) => {
             Log out
           </motion.h3>
         </motion.div>
-        <Sidebar stat={open} akunName={akunName} stat_fn={closeOpen}></Sidebar>
+        <Sidebar
+          stat={open}
+          akunName={akunName}
+          sectionFn={sectionFn}
+          stat_fn={closeOpen}
+        ></Sidebar>
       </header>
     </>
   );
