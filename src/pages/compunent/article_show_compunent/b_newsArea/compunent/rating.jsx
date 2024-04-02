@@ -5,14 +5,23 @@ import loading from "./source/loading.gif";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// staticRate, rating, rateHidden
-export const Rating = ({ apiData }) => {
+// staticRate, rating, rateHidden,setStaticRate,setRating,setRateHidden
+export const Rating = ({
+  apiData,
+  dataFromDb,
+  staticRate,
+  rating,
+  rateHidden,
+  setStaticRate,
+  setRating,
+  setRateHidden,
+}) => {
   const [dataApi, setDataApi] = useState(null);
-  const [dataFromDb, setDataFromDb] = useState(null);
-  const [rating, setRating] = useState(0);
-  const [rateHidden, setRateHidden] = useState(false);
+  // const [dataFromDb, setDataFromDb] = useState(null);
   const [rateLoad, setRateLoad] = useState(false);
-  const [staticRate, setStaticRate] = useState(0);
+  // const [rateHidden, setRateHidden] = useState(false);
+  // const [rating, setRating] = useState(0);
+  // const [staticRate, setStaticRate] = useState(0);
 
   const [nama_akun, setNama_akun] = useState("");
 

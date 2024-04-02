@@ -85,9 +85,13 @@ export const ArticleArea = ({ apiData }) => {
 
         <Rating
           apiData={apiData}
+          dataFromDb={dataFromDb}
           staticRate={staticRate}
           rating={rating}
           rateHidden={rateHidden}
+          setStaticRate={setStaticRate}
+          setRating={setRating}
+          setRateHidden={setRateHidden}
         ></Rating>
       </div>
     </>
