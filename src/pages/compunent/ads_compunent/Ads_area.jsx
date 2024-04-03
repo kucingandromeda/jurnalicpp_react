@@ -4,10 +4,14 @@ import { NativeAds } from "./compunent/nativeAds";
 export const AdsArea = () => {
   return (
     <>
-      <div className="template-ads-area">
-        <h3>advertisement</h3>
-        <NativeAds></NativeAds>
-      </div>
+      {JSON.parse(import.meta.env.VITE_PRODUCTION) ? (
+        <div className="template-ads-area">
+          <h3>advertisement</h3>
+          <NativeAds></NativeAds>
+        </div>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
